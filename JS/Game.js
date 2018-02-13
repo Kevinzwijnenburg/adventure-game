@@ -98,7 +98,7 @@ function level8() {
  document.getElementById('button2').innerHTML="open the front door";
   document.getElementById('button3').innerHTML="go trough the kitchen door";
   document.getElementById("button2").addEventListener("click", level9);
-  document.getElementById("button3").addEventListener("click", leveldead6);
+  document.getElementById("button3").addEventListener("click", leveldead8);
  document.getElementById('keys').style.display="none";
 }
 
@@ -126,7 +126,7 @@ function level10() {
         if (inventory.includes("keys")){
             levelfinsish();
         } else {
-              leveldeadfinsih();
+              leveldeadfinish();
         }
     };
   document.getElementById("button2").addEventListener("click", levelfinish);
@@ -178,6 +178,7 @@ function leveldead4() {
  document.getElementById('button3').style.display="none";
   document.getElementById('button1').innerHTML="Restart";
   document.getElementById('button1').addEventListener("click", restart);
+  document.getElementById('keys').style.display="none";
 }
 function leveldead5() {
   document.body.style.background="url('../IMG/garage.jpg')";
@@ -208,7 +209,16 @@ function leveldead7() {
   document.getElementById('button1').innerHTML="Restart";
   document.getElementById('button1').addEventListener("click", restart);
 }
-function leveldeadfinsih() {
+function leveldead8() {
+  document.body.style.background="url('../IMG/kitchen.jpg')";
+ document.body.style.backgroundSize='cover';
+ document.getElementById('button1').style.display="block";
+ document.getElementById('button2').style.display="none";
+ document.getElementById('button3').style.display="none";
+  document.getElementById('button1').innerHTML="Restart";
+  document.getElementById('button1').addEventListener("click", restart);
+}
+function leveldeadfinish() {
   document.body.style.background="url('../IMG/end.jpg')";
  document.body.style.backgroundSize='cover';
  document.getElementById('button1').style.display="block";
